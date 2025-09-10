@@ -1,5 +1,6 @@
 from pydantic import BaseModel
 from datetime import datetime
+from uuid import UUID
 
 # --- Request models ---
 
@@ -15,7 +16,7 @@ class TodoUpdate(BaseModel):
 # --- Response models ---
 
 class TodoResponse(BaseModel):
-    id: int
+    id: UUID 
     description: str
     isDeleted: bool
     isCompleted: bool
